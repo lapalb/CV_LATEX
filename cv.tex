@@ -1,0 +1,183 @@
+\documentclass[a4paper,10pt]{article}
+
+%A Few Useful Packages
+\usepackage{marvosym}
+\usepackage{hyperref}
+\usepackage{fontspec} 					%for loading fonts
+\usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
+\RequirePackage{color,graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[big]{layaureo} 				%better formatting of the A4 page
+% an alternative to Layaureo can be ** \usepackage{fullpage} **
+\usepackage{supertabular} 				%for Grades
+\usepackage{titlesec}					%custom \section
+
+%Setup hyperref package, and colours for links
+\usepackage{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+
+%FONTS
+\defaultfontfeatures{Mapping=tex-text}
+%\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin}
+%%% modified for Karol Kozioł for ShareLaTeX use
+\setmainfont[
+SmallCapsFont = Fontin-SmallCaps.otf,
+BoldFont = Fontin-Bold.otf,
+ItalicFont = Fontin-Italic.otf
+]
+{Fontin.otf}
+%%%
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{3pt}{3pt}
+%Tweak a bit the top margin
+%\addtolength{\voffset}{-1.3cm}
+
+%Italian hyphenation for the word: ''corporations''
+\hyphenation{im-pre-se}
+
+%-------------WATERMARK TEST [**not part of a CV**]---------------
+\usepackage[absolute]{textpos}
+
+\setlength{\TPHorizModule}{30mm}
+\setlength{\TPVertModule}{\TPHorizModule}
+\textblockorigin{2mm}{0.65\paperheight}
+\setlength{\parindent}{0pt}
+
+%--------------------BEGIN DOCUMENT----------------------
+\begin{document}
+
+%WATERMARK TEST [**not part of a CV**]---------------
+%\font\wm=''Baskerville:color=787878'' at 8pt
+%\font\wmweb=''Baskerville:color=FF1493'' at 8pt
+%{\wm 
+%	\begin{textblock}{1}(0,0)
+%		\rotatebox{-90}{\parbox{500mm}{
+%			Typeset by Alessandro Plasmati with \XeTeX\  \today\ for 
+%			{\wmweb \href{http://www.aleplasmati.comuv.com}{aleplasmati.comuv.com}}
+%		}
+%	}
+%	\end{textblock}
+%}
+
+\pagestyle{empty} % non-numbered pages
+
+\font\fb=''[cmr10]'' %for use with \LaTeX command
+
+
+%-- -- -- -- -- -- -- -- -- -- TITLE-- -- -- -- -- -- -
+
+\par{\centering
+		{\Huge Ashish Kumar Jha
+	}\bigskip\par}
+
+%--------------------SECTIONS-----------------------------------
+%Section: Personal Data
+\section{Personal Data}
+
+\begin{tabular}{rl}
+    \textsc{Date of Birth:} & 02 April 1997 \\
+    \textsc{Address:}   & Shiv-sagar colony, Laheriasarai, Darbhanga, Bihar \\
+    \textsc{Phone:}     & +91-9430682550\\
+    \textsc{email:}     & \href{mailto:e-mail id}{amiableashish55@gmail.com}\\
+    \textsc{LinkedIn:}&\url{https://www.linkedin.com/in/ashish-jha-6bb7b3101}\\
+    \textsc{GitHub:}&\url{https://github.com/lapalb}\\
+    \textsc{HackerRank:}&\url{https://www.hackerrank.com/ashish\_1996}
+    
+    
+\end{tabular}
+
+\section{Career Objective}
+
+\footnotesize{To secure a position where I can efficiently contribute my skills and abilities to the growth of the organization and make products which intergrate with day to day life.}
+
+
+
+%Section: Education
+\section{Education}
+\begin{tabular}{rl}	
+ \textsc{Current} & Degree \textsc{B-Tech in Computer Science and Engineering},\\ & \textbf{National Institute Of Technology}, Rourkela\\
+& \small Advisor: Dr. Bidyut Kumar \textsc{Patra}\\
+&\normalsize \textsc{Gpa}: 8.38/10 \\ \\
+\textsc{Class 12 Garduation Year} & Intermediate in \textsc{Science},\\ & \textbf{Woodbine Modern school}\\
+&\normalsize \textsc{96.2}: Percentage
+\\ \\
+\textsc{Graduation Year} & Matriculation ,\\ & \textbf{Kendriya Vidyalaya}\\
+&\normalsize \textsc{95}: Percentage
+\end{tabular}
+
+%section Projects
+\section{Projects}
+\begin{tabular}{r|p{11cm}}
+\textsc{Self Driving Car}&\textsc{August-Novermber , 2017}\\ &\footnotesize{I along with my team built our own self-driving car. It was a modelled version of a car (so it wasn't driving on the streets of real cities) but still - it learned how to drive itself. We used Open source car model which was developed in Unity game engine. We trained it using the pioneering research paper of Nvidia. To achieve this, we used deep \textit{\textbf{Q-Learning}}.}\\ \\
+
+\textsc{SCHEMCON-17 Website}&\textsc{March - April , 2017}\\ &\footnotesize{I was developing website for a conclave called SCHEMCON, which register a participation
+of around 600 including foreign delegates. I developed the front end and using mobile-first approach. Backend was done using Google tools. Then I did SEO for the
+website.It was for the first time that a fully responsive website was designed in college. Moreover We designed a \textit{\textbf{Content Management System}} so that event-organizer can directly add their event without bothering the Web-Developers.}\\ \\
+
+\textsc{Digital Home Security}&\textsc{August-October , 2016}\\ &\footnotesize{This was an Arduino based project. We designed a door lock system. It could be accessed via keyboard(4*4)or Bluetooth. It will open if someone types the correct code. The lock was based on servo motor and there was HC-05 module for Bluetooth module. It contained emergency switch which can be installed inside the house and can be used in case of emergency.}\\ \\
+\textsc{INNO-17 website}&\textsc{ September, 2016}\\ &\footnotesize{I along with my team implemented a \textit{\textbf{Parallax scrolling website}} based on
+game theme for the \textit{INNOVISION, Technical festival of NIT Rourkela}. In the website we used differential motion in between layers to create an illusion of depth. }
+
+
+%multicolumn{2}{c}{}
+\end{tabular}
+%section Work Experience
+\section{Work Experience}
+\begin{tabular}{r|p{11cm}}
+\textsc{Feb-2017}&\textsc{Web-developer at Seabiscuit}\\ &\footnotesize{I was asked to renovate the website of Seabiscuit website. We made sure that it confirm
+the material design principles. Seabiscuit is a company which trade in metal scraps}\\
+\end{tabular}
+
+\section{Technical Skills}
+\begin{tabular}{rl}
+ General Programming:& C, C++, Java, Python, Javascript\\
+ Databases:&MYSQL, MongoDB \\
+ Frameworks:& OpenMP, OpenCV, OpenGL, Angular, Node, Django ,PWA,Hadoop, PHP, Prolog , Ajax, Jquery,\\ &Pandas, Numpy, Plotly, Seaborn\\
+ Other Software: & Adobe Photoshop, MS Office, AfterEffect, Tableau, Git, Cpanel, Android Studio\\
+ 
+\end{tabular}
+\section{Soft Skills}
+\begin{tabular}{rl}
+\textsc{Languages} &English - Professional Fluency\\&Hindi - Mother Tongue\\ \\
+\end{tabular}
+
+\section{Extra Curricular Activities}
+\begin{tabular}{r|p{11cm}}
+
+\textsc{Literary and cultural Society} & \emph{Technical- coordinator , 2016-17}\\&\footnotesize{I was handling all the technical aspect of the fest. I was responsible for website, automation
+of fest-activity and other technical things associated with club }\\ \\
+\textsc{National Service Scheme} & \emph{Awareness and Cleaning Mentor, 2015-16}\\&\footnotesize{I along with my teammates started awareness program for sanitation and cleanliness. We raised awareness about the importance of cleanliness in a tribal village. We also made them aware of various social security schemes by the Indian government and how they can get benefits from it. We also motivated to convert their village to ODF village.}\\ \\
+\\ \\
+
+\multicolumn{2}{c}{}
+\end{tabular}
+
+%Section: Scholarships and additional info
+\section{Scholarships and Certificates}
+\begin{tabular}{rl}
+ \textsc{October} 2017 & NPTEL: Introduction To Parallel Programming in OpenMp \normalsize\\
+ \textsc{December} 2017 & Udemy: A Gentle Introduction to Deep Learning Using Keras \normalsize\\
+ \textsc{December} 2017 & Udemy:  Python for Data Science and Machine Learning Bootcamp  \normalsize \\
+ \textsc{December} 2017 & Udemy: Essentials in JavaScript ES6 \normalsize\\
+ \textsc{December} 2017 & Udemy: R Programming Language Introduction  \normalsize\\
+
+\end{tabular}
+
+
+\section{Interests and Activities}
+Quora, Google Local Guide(Level-5), Indian Politics, Swimming
+\\
+
+%\newpage
+
+%\hypertarget{gmat}{\textsc{Gmat}\setmainfont{LMRoman10
+
+%{Regular}\textregistered\setmainfont[SmallCapsFont=Fontin-SmallCaps]{Fontin- Regular}
+
+%\XeTeXpdffile &#39;&#39;GMAT.pdf&#39;&#39; page 1 scaled 800
+
+\end{document}
